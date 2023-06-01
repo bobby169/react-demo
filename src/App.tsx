@@ -7,6 +7,7 @@ import { useOnlineStatus2 } from "./components/useOnlineStatus";
 import { FilterList } from "./components/trans/FilterList";
 import { fakeNames } from "./components/trans/fakeNames";
 import "./css/test.css";
+import DeferredTest from "./components/deferred/DeferredTest";
 
 function StatusBar() {
   const isOnline = useOnlineStatus2();
@@ -19,7 +20,8 @@ function App() {
   return (
     <>
       <div>
-        <FilterList names={fakeNames} />
+        <DeferredTest></DeferredTest>
+        {/* <FilterList names={fakeNames} /> */}
         <StatusBar />
         <h2>输入密码</h2>
         <PasswordField />
