@@ -6,6 +6,10 @@ import SlowList from "./SlowList.js";
 // 2. 列表和大型数据集：当需要处理大量数据时，useDeferredValue 可以帮助我们控制渲染的优先级，从而避免阻塞用户界面。
 //    例如，在分页加载数据的情况下，我们可以使用 useDeferredValue 在高优先级任务完成后再更新数据列表。
 
+// useDeferredValue 与 debounce 区别:
+// 区别就在于这一句话useDeferredValue是否延迟取决于计算机的性能，如果计算机运行不够快，导致渲染占用的时间过长，则会产生一个落后于观察值的延时值。
+// 示例： https://usedeferredvalue-example.netlify.app 这个示例可以打开 chrome开发者工具“性能” -> "cpu 4倍降速"作比较
+
 export default function DeferredTest() {
   const [text, setText] = useState("");
   const defrredText = useDeferredValue(text);
