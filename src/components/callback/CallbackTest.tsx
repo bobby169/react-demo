@@ -1,5 +1,13 @@
 import { memo, useCallback, useState } from "react";
 
+// usecallback usememo memo 的区别(简洁)
+
+// 1. usecallback优化函数内部的函数,固定函数地址,下次引用的时候不重新创建函数
+
+// 2. usememo 优化计算复杂函数,usememo 固定函数返回值
+
+// 3. memo优化组件,防止跟着父组件重新渲染
+
 const CallbackTest = () => {
   const [num, setNum] = useState(0);
   const [num1, setNum1] = useState(0);
