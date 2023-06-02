@@ -1,4 +1,4 @@
-import { useId, useState } from "react";
+import { useEffect, useId, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -14,6 +14,7 @@ import CallbackTest from "./components/callback/CallbackTest";
 import ChatEffect from "./components/effect/ChatEffect";
 import DargEffect from "./components/effect/DargEffect";
 import Modal from "./components/effect/Modal";
+import { flushSync } from "react-dom";
 
 function StatusBar() {
   const isOnline = useOnlineStatus2();
@@ -22,7 +23,26 @@ function StatusBar() {
 
 function App() {
   const [count, setCount] = useState(0);
+  function handleClick() {
+    // 下面合起来只能+5
+    // setCount(count + 5);
+    // setCount(count + 5);
 
+    // 下 面合起来可以+10
+    // setCount((count) => count + 5); // 将作为挂起状态接收并作为下一个状态返回
+    // setCount((count) => count + 5);
+
+    // 如果需要使用 next 状态，可以在将其传递给函数之前将其保存在变量中
+    const nextCount = count + 5;
+    setCount(nextCount);
+    console.log(count, "still old"); // Still "Taylor"!
+    console.log(nextCount, "new"); // "Thomas"
+  }
+  setTimeout(() => {
+    flushSync(() => {
+      console.info(333);
+    });
+  }, 1000);
   return (
     <>
       <div>
@@ -46,7 +66,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1 onClick={handleClick}>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
