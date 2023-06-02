@@ -10,6 +10,7 @@ import "./css/test.css";
 import DeferredTest from "./components/deferred/DeferredTest";
 import MyInputIndex from "./components/ref/MyInputIndex";
 import TooltipIndex from "./components/layoutEffect/TooltipIndex";
+import CallbackTest from "./components/callback/CallbackTest";
 
 function StatusBar() {
   const isOnline = useOnlineStatus2();
@@ -22,6 +23,7 @@ function App() {
   return (
     <>
       <div>
+        <CallbackTest></CallbackTest>
         <TooltipIndex></TooltipIndex>
         <MyInputIndex />
         {/* <DeferredTest></DeferredTest> */}
