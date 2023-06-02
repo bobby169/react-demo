@@ -11,6 +11,7 @@ import DeferredTest from "./components/deferred/DeferredTest";
 import MyInputIndex from "./components/ref/MyInputIndex";
 import TooltipIndex from "./components/layoutEffect/TooltipIndex";
 import CallbackTest from "./components/callback/CallbackTest";
+import ChatEffect from "./components/effect/ChatEffect";
 
 function StatusBar() {
   const isOnline = useOnlineStatus2();
@@ -23,6 +24,7 @@ function App() {
   return (
     <>
       <div>
+        <ChatEffect></ChatEffect>
         <CallbackTest></CallbackTest>
         <TooltipIndex></TooltipIndex>
         <MyInputIndex />
