@@ -1,16 +1,18 @@
 import { useState, useEffect } from "react";
 import { createConnection } from "./Chat";
+import { useChatRoom } from "./UseChatRoom";
 
 function ChatRoom({ roomId }) {
   const [serverUrl, setServerUrl] = useState("https://localhost:1234");
+  useChatRoom({ serverUrl, roomId });
 
-  useEffect(() => {
-    const connection = createConnection(serverUrl, roomId);
-    connection.connect();
-    return () => {
-      connection.disconnect();
-    };
-  }, [roomId, serverUrl]);
+  // useEffect(() => {
+  //   const connection = createConnection(serverUrl, roomId);
+  //   connection.connect();
+  //   return () => {
+  //     connection.disconnect();
+  //   };
+  // }, [roomId, serverUrl]);
 
   return (
     <>
