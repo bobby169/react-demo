@@ -12,6 +12,8 @@ import MyInputIndex from "./components/ref/MyInputIndex";
 import TooltipIndex from "./components/layoutEffect/TooltipIndex";
 import CallbackTest from "./components/callback/CallbackTest";
 import ChatEffect from "./components/effect/ChatEffect";
+import DargEffect from "./components/effect/DargEffect";
+import Modal from "./components/effect/Modal";
 
 function StatusBar() {
   const isOnline = useOnlineStatus2();
@@ -24,6 +26,8 @@ function App() {
   return (
     <>
       <div>
+        <Modal></Modal>
+        {/* <DargEffect></DargEffect> */}
         <ChatEffect></ChatEffect>
         <CallbackTest></CallbackTest>
         <TooltipIndex></TooltipIndex>
