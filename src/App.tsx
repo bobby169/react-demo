@@ -9,6 +9,7 @@ import { fakeNames } from "./components/trans/fakeNames";
 import "./css/test.css";
 import DeferredTest from "./components/deferred/DeferredTest";
 import MyInputIndex from "./components/ref/MyInputIndex";
+import TooltipIndex from "./components/layoutEffect/TooltipIndex";
 
 function StatusBar() {
   const isOnline = useOnlineStatus2();
@@ -21,6 +22,7 @@ function App() {
   return (
     <>
       <div>
+        <TooltipIndex></TooltipIndex>
         <MyInputIndex />
         {/* <DeferredTest></DeferredTest> */}
         {/* <FilterList names={fakeNames} /> */}
