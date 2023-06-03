@@ -16,6 +16,8 @@ import DargEffect from "./components/effect/DargEffect";
 import Modal from "./components/effect/Modal";
 import { flushSync } from "react-dom";
 import StateObject from "./components/state/stateObject";
+import StateDeepObject from "./components/state/StateDeepObject";
+import TodoIndex from "./components/state/todo/TodoIndex";
 
 function StatusBar() {
   const isOnline = useOnlineStatus2();
@@ -47,6 +49,8 @@ function App() {
   return (
     <>
       <div>
+        <TodoIndex></TodoIndex>
+        <StateDeepObject></StateDeepObject>
         <StateObject></StateObject>
         <Modal></Modal>
         {/* <DargEffect></DargEffect> */}
