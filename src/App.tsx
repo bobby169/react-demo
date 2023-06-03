@@ -19,6 +19,7 @@ import StateObject from "./components/state/stateObject";
 import StateDeepObject from "./components/state/StateDeepObject";
 import TodoIndex from "./components/state/todo/TodoIndex";
 import StateImmer from "./components/state/StateImmer";
+import StateFunction from "./components/state/StateFunction";
 
 function StatusBar() {
   const isOnline = useOnlineStatus2();
@@ -50,6 +51,7 @@ function App() {
   return (
     <>
       <div>
+        <StateFunction></StateFunction>
         <StateImmer></StateImmer>
         <TodoIndex></TodoIndex>
         <StateDeepObject></StateDeepObject>
