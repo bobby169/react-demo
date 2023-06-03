@@ -23,6 +23,7 @@ import StateFunction from "./components/state/StateFunction";
 import StateReset from "./components/state/StateReset";
 import StateSend from "./components/state/StateSend";
 import HeadIndex from "./components/context/head/HeadIndex";
+import ContextImageIndex from "./components/context/image/ContextImageIndex";
 
 function StatusBar() {
   const isOnline = useOnlineStatus2();
@@ -54,6 +55,7 @@ function App() {
   return (
     <>
       <div>
+        <ContextImageIndex></ContextImageIndex>
         <HeadIndex></HeadIndex>
         <StateSend></StateSend>
         <StateReset></StateReset>
