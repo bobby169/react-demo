@@ -15,12 +15,13 @@ import ChatEffect from "./components/effect/ChatEffect";
 import DargEffect from "./components/effect/DargEffect";
 import Modal from "./components/effect/Modal";
 import { flushSync } from "react-dom";
-import StateObject from "./components/state/stateObject";
+import StateObject from "./components/state/StateObject";
 import StateDeepObject from "./components/state/StateDeepObject";
 import TodoIndex from "./components/state/todo/TodoIndex";
 import StateImmer from "./components/state/StateImmer";
 import StateFunction from "./components/state/StateFunction";
 import StateReset from "./components/state/StateReset";
+import StateSend from "./components/state/StateSend";
 
 function StatusBar() {
   const isOnline = useOnlineStatus2();
@@ -52,6 +53,7 @@ function App() {
   return (
     <>
       <div>
+        <StateSend></StateSend>
         <StateReset></StateReset>
         <StateFunction></StateFunction>
         <StateImmer></StateImmer>
