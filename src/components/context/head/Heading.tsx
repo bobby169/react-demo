@@ -6,6 +6,7 @@ export default function Heading({ children }) {
   // 如果你不提供 context，React 会使用你在上一步指定的默认值
 
   // 这里level不用从props中获取，而是从上下文中获取
+  // 读取context的值
   const level = useContext(LevelContext);
   switch (level) {
     case 0:
