@@ -15,6 +15,7 @@ import ChatEffect from "./components/effect/ChatEffect";
 import DargEffect from "./components/effect/DargEffect";
 import Modal from "./components/effect/Modal";
 import { flushSync } from "react-dom";
+import StateObject from "./components/state/stateObject";
 
 function StatusBar() {
   const isOnline = useOnlineStatus2();
@@ -46,6 +47,7 @@ function App() {
   return (
     <>
       <div>
+        <StateObject></StateObject>
         <Modal></Modal>
         {/* <DargEffect></DargEffect> */}
         <ChatEffect></ChatEffect>
