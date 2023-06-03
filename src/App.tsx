@@ -18,6 +18,7 @@ import { flushSync } from "react-dom";
 import StateObject from "./components/state/stateObject";
 import StateDeepObject from "./components/state/StateDeepObject";
 import TodoIndex from "./components/state/todo/TodoIndex";
+import StateImmer from "./components/state/StateImmer";
 
 function StatusBar() {
   const isOnline = useOnlineStatus2();
@@ -49,6 +50,7 @@ function App() {
   return (
     <>
       <div>
+        <StateImmer></StateImmer>
         <TodoIndex></TodoIndex>
         <StateDeepObject></StateDeepObject>
         <StateObject></StateObject>
