@@ -22,6 +22,7 @@ import StateImmer from "./components/state/StateImmer";
 import StateFunction from "./components/state/StateFunction";
 import StateReset from "./components/state/StateReset";
 import StateSend from "./components/state/StateSend";
+import HeadIndex from "./components/context/head/HeadIndex";
 
 function StatusBar() {
   const isOnline = useOnlineStatus2();
@@ -53,6 +54,7 @@ function App() {
   return (
     <>
       <div>
+        <HeadIndex></HeadIndex>
         <StateSend></StateSend>
         <StateReset></StateReset>
         <StateFunction></StateFunction>
